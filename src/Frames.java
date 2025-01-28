@@ -705,7 +705,7 @@ public class Frames { //example of inheritance
         open.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try{
-                    File fle = new File("D:\\java files\\Automobile Sales Management System\\a\\b\\c\\d\\e\\"+credentialarray[0]+".csv");
+                    File fle = new File("\\a\\b\\c\\d\\e\\"+credentialarray[0]+".csv");
                     String path = fle.getAbsolutePath();
                     System.out.println(path);
                     if(Desktop.isDesktopSupported())
@@ -824,7 +824,7 @@ public class Frames { //example of inheritance
                         String line , check;
                         try{
                             //File fle = new File("Records.csv");
-                            String path = "D:\\java files\\Automobile Sales Management System\\a\\b\\c\\d\\e\\"+credentialarray[0]+".csv";
+                            String path = "\\a\\b\\c\\d\\e\\"+credentialarray[0]+".csv";
                             //fle.getAbsolutePath();
                             BufferedReader br = new BufferedReader(new FileReader(path));
                             //System.out.println(path);

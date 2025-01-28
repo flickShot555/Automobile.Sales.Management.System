@@ -22,7 +22,7 @@ Writer(){}
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyy-MM-dd");
             String formattedDate = dateFormat.format(currentDate);
             System.out.println(formattedDate);
-            FileOutputStream fos = new FileOutputStream("D:\\java files\\Automobile Sales Management System\\a\\b\\c\\d\\e\\"+name_of_file+".csv",true);
+            FileOutputStream fos = new FileOutputStream("\\a\\b\\c\\d\\e\\"+name_of_file+".csv",true);
             PrintWriter fw = new PrintWriter(fos);
             fw.printf("%s,%s,%s,%s,%s,%s,%s\n",vehicletype,company,name,VIN,prodyear,price,formattedDate);
             fw.close();

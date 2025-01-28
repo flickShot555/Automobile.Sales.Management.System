@@ -25,15 +25,15 @@ class Credentials extends Portals{
         String b = this.password;
 
         try{
-            File FLE = new File("D:\\java files\\Automobile Sales Management System\\" +
+            File FLE = new File(
                     "a\\b\\c\\d\\e\\Credentials.csv");
             //FLE.createNewFile();
             path = FLE.getAbsolutePath();
             if(!FLE.exists()){
-                File obj = new File("D:\\java files\\Automobile Sales Management System\\" +
+                File obj = new File(
                         "a\\b\\c\\d\\e\\" +
                         "Credentials.csv");
-                FileOutputStream fle = new FileOutputStream("D:\\java files\\Automobile Sales Management System\\" +
+                FileOutputStream fle = new FileOutputStream(
                         "a\\b\\c\\d\\e\\Credentials.csv",true);
                 PrintWriter pen = new PrintWriter(fle);
                 String first = "Usernames"; String second = "Passwords";
@@ -42,7 +42,7 @@ class Credentials extends Portals{
                 System.out.println("successfully written");
                 pen.close();
             }
-            FileOutputStream fos = new FileOutputStream("D:\\java files\\Automobile Sales Management System\\" +
+            FileOutputStream fos = new FileOutputStream(
                     "a\\b\\c\\d\\e\\Credentials.csv",true);
             PrintWriter pen = new PrintWriter(fos);
             pen.printf("%s,%s\n",a,b);
@@ -60,7 +60,7 @@ class Credentials extends Portals{
         boolean check = false;
         try
         {
-            BufferedReader br = new BufferedReader(new FileReader("D:\\java files\\Automobile Sales Management System\\" +
+            BufferedReader br = new BufferedReader(new FileReader(
                     "a\\b\\c\\d\\e\\Credentials.csv"));
             String line;
             while((line = br.readLine())!=null){
@@ -70,6 +70,7 @@ class Credentials extends Portals{
                     break;
                 }
             }
+            br.close();
 
         }catch(IOException r)
         {
